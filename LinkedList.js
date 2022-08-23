@@ -6,16 +6,23 @@ export default class LinkedList {
     this.nodes = nodes;
   }
 
+  // adds a new node containing value to the end of the list
   append(value) {
-    // create new node
     const newNode = new Node(value);
-    // test for empty list
     if (this.nodes[this.nodes.length - 1] != null) {
-      // last node reference new node
+      // previous last node reference new node
       this.nodes[this.nodes.length - 1].nextNode = newNode;
     }
-    // add new node to list
     this.nodes.push(newNode);
+  }
+
+  // adds a new node containing value to the start of the list
+  prepend(value) {
+    const newNode = new Node(value);
+    if (this.nodes[0] != null) {
+        newNode.nextNode = this.nodes[0];
+    }
+    this.nodes.unshift(newNode);
   }
 
   size() {
