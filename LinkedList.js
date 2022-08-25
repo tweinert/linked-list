@@ -40,4 +40,8 @@ export default class LinkedList {
   at(index) {
     return (this.nodes[index] ? this.nodes[index] : undefined);
   }
+
+  pop() {
+    this.nodes.pop();
+  }
 }

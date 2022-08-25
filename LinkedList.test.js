@@ -45,9 +45,14 @@ describe("Linked List, basics", () => {
   });
 });
 
-defines("Linked List, advanced", () => {
+describe("Linked List, advanced", () => {
   let testList = new LinkedList();
   testList.append("first");
   testList.append("second");
   testList.append("third");
+  testList.pop();
+
+  test("defines pop() and tail", () => {
+    expect(testList.tail().value).toBe("second");
+  });
 });
