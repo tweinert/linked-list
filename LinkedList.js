@@ -28,4 +28,16 @@ export default class LinkedList {
   size() {
     return this.nodes.length;
   }
+
+  head() {
+    return this.nodes[0];
+  }
+
+  tail() {
+    return this.nodes[this.nodes.length - 1];
+  }
+
+  at(index) {
+    return (this.nodes[index] ? this.nodes[index] : undefined);
+  }
 }

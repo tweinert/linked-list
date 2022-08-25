@@ -1,7 +1,7 @@
 import Node from "./Node";
 import LinkedList from "./LinkedList";
 
-describe("Linked List", () => {
+describe("Linked List, basics", () => {
   let testList = new LinkedList();
   testList.append("append");
   testList.append("second append");
@@ -27,4 +27,27 @@ describe("Linked List", () => {
   test("defines size()", () => {
     expect(testList.size()).toBe(3);
   });
+
+  test("defines head()", () => {
+    expect(testList.head().value).toBe("prepend");
+  });
+
+  test("defines tail()", () => {
+    expect(testList.tail().value).toBe("second append");
+  });
+
+  test("defines at()", () => {
+    expect(testList.at(1).value).toBe("append");
+  });
+
+  test("defines at(), null", () => {
+    expect(testList.at(5)).toBe(undefined);
+  });
+});
+
+defines("Linked List, advanced", () => {
+  let testList = new LinkedList();
+  testList.append("first");
+  testList.append("second");
+  testList.append("third");
 });
