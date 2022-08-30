@@ -51,4 +51,16 @@ export default class LinkedList {
 
     return curNode;
   }
+
+  at(index) {
+    let total = 0;
+    let curNode = this.headNode;
+
+    while (total < index) {
+      curNode = curNode.nextNode;
+      total++;
+    }
+
+    return curNode;
+  }
 }
