@@ -19,5 +19,10 @@ export default class LinkedList {
     curNode.nextNode = newNode;
   }
 
-  
+  prepend(value) {
+    const newNode = new Node(value);
+
+    newNode.nextNode = this.headNode;
+    this.headNode = newNode;
+  }
 }
