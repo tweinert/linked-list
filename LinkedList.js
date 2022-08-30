@@ -25,4 +25,14 @@ export default class LinkedList {
     newNode.nextNode = this.headNode;
     this.headNode = newNode;
   }
+
+  size() {
+    let total = 1;
+    let curNode = this.headNode;
+
+    while (curNode.nextNode != null) {
+      curNode = curNode.nextNode;
+      total++;
+    }
+  }
 }
