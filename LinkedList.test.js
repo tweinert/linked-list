@@ -35,4 +35,8 @@ describe("Linked List methods", () => {
     testList.pop();
     expect(testList.tail().value).toBe("This is the first node");
   });
+
+  it("contains()", () => {
+    expect(testList.contains("This is the first node")).toBe(true);
+  });
 });
