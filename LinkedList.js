@@ -63,4 +63,14 @@ export default class LinkedList {
 
     return curNode;
   }
+
+  pop() {
+    let curNode = this.headNode;
+
+    while (curNode.nextNode.nextNode != null) {
+      curNode = curNode.nextNode;
+    }
+
+    curNode.nextNode = null;
+  }
 }

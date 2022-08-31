@@ -30,4 +30,9 @@ describe("Linked List methods", () => {
   it("at()", () => {
     expect(testList.at(1).value).toBe("This is the first node");
   });
+
+  it("pop()", () => {
+    testList.pop();
+    expect(testList.tail().value).toBe("This is the first node");
+  });
 });
