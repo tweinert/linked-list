@@ -39,4 +39,13 @@ describe("Linked List methods", () => {
   it("contains()", () => {
     expect(testList.contains("This is the first node")).toBe(true);
   });
+
+  it("contains() false", () => {
+    expect(testList.contains("Not a node value")).toBe(false);
+  });
+
+  it("find()", () => {
+    testList.append("New node");
+    expect(testList.find("This is the first node")).toBe(1);
+  });
 });

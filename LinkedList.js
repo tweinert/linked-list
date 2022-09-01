@@ -91,4 +91,24 @@ export default class LinkedList {
 
     return false;
   }
+
+  find(value) {
+    let curNode = this.headNode;
+    let total = 0;
+
+    while (curNode.nextNode != null) {
+      if (curNode.value == value) {
+        return total;
+      }
+
+      total++;
+      curNode = curNode.nextNode;
+    }
+
+    if (curNode.value == value) {
+      return total;
+    }
+
+    return null;
+  }
 }
