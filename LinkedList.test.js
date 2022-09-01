@@ -48,4 +48,8 @@ describe("Linked List methods", () => {
     testList.append("New node");
     expect(testList.find("This is the first node")).toBe(1);
   });
+
+  it("toString()", () => {
+    expect(testList.toString()).toBe("This was prepended -> This is the first node -> New node -> null");
+  });
 });

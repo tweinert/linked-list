@@ -111,4 +111,20 @@ export default class LinkedList {
 
     return null;
   }
+
+  toString() {
+    let curNode = this.headNode;
+    let outputString = "";
+
+    while (curNode.nextNode != null) {
+      outputString += curNode.value;
+      outputString += " -> ";
+
+      curNode = curNode.nextNode;
+    }
+
+    outputString += curNode.value + " -> null";
+
+    return outputString;
+  }
 }
