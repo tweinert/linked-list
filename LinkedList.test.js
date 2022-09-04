@@ -52,4 +52,9 @@ describe("Linked List methods", () => {
   it("toString()", () => {
     expect(testList.toString()).toBe("This was prepended -> This is the first node -> New node -> null");
   });
+
+  it("insertAt()", () => {
+    testList.insertAt("This node was inserted", 1);
+    expect(testList.at(1).value).toBe("This node was inserted");
+  });
 });
