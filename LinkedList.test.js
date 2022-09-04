@@ -57,4 +57,9 @@ describe("Linked List methods", () => {
     testList.insertAt("This node was inserted", 1);
     expect(testList.at(1).value).toBe("This node was inserted");
   });
+
+  it("removeAt()", () => {
+    testList.removeAt(1);
+    expect(testList.at(1).value).toBe("This is the first node");
+  });
 });
